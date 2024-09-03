@@ -1,0 +1,43 @@
+@import "../../Sass/var";
+@import "../../Sass/mixin";
+
+.header {
+  min-height: 80px;
+  padding: 10px 40px;
+  background-color: $background1;
+  @include Rowflex_between;
+  color: #fff;
+  .logo {
+    color: $background2;
+    display: flex;
+    .tag {
+      color: red;
+    }
+  }
+  .links {
+    @include Rowflex_gaps(20px);
+    cursor: pointer;
+
+    span {
+      &:nth-child(3) {
+        color: aqua;
+      }
+      &:hover {
+        color: green;
+      }
+    }
+    .butt {
+      @include custom_button(#000, #fff);
+    }
+  }
+}
+
+// *** Media quries
+@media (max-width: 768px) {
+  .header {
+    @include Columnflex_gaps(20px);
+    .links {
+      @include Columnflex_gaps(20px);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@mixin Rowflex_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin Columnflex_gaps($gaps) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $gaps;
+}
+
+@mixin Rowflex_gaps($gaps) {
+  display: flex;
+  align-items: center;
+  gap: $gaps;
+}
+
+@mixin custom_button($color, $background) {
+  outline: none;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: $color;
+  background-color: $background;
+}
